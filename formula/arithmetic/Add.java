@@ -1,22 +1,23 @@
-import formula.*;
-import number.*;
+package formula.arithmetic;
 
-class Add extends BinaryOperator {
+import formula.*;
+
+public class Add extends BinaryOperator {
     public Add(Expression l, Expression r) {
-        this.left = l;
-        this.right = r;
+        super(l, r);
     }
 
     @Override
     public int getValue() {
-        return l.getValue() + r.getValue;
+        return this.left.getValue() + this.right.getValue();
     }
 
     @Override
     public int getPriority() {
-        return 2;
+        return 1;
     }
 
+    @Override
     public String toString() {
         return super.toString("+");
     }

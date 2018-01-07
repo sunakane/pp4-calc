@@ -1,5 +1,6 @@
+package formula.arithmetic;
+
 import formula.*;
-import number.*;
 
 public class Sub extends BinaryOperator {
     public Sub(Expression l, Expression r) {
@@ -13,7 +14,7 @@ public class Sub extends BinaryOperator {
 
     @Override
     public int getPriority() {
-        return 2;
+        return 1;
     }
 
     @Override

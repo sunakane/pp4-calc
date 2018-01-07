@@ -1,10 +1,10 @@
+package formula.arithmetic;
+
 import formula.*;
-import number.*;
 
 public class Div extends BinaryOperator {
     public Div(Expression l, Expression r) {
-        this.left = l;
-        this.right = r;
+    	super(l, r);
     }
 
     @Override
@@ -14,9 +14,10 @@ public class Div extends BinaryOperator {
 
     @Override
     public int getPriority() {
-        return 1;
+        return 2;
     }
 
+    @Override
     public String toString() {
         return super.toString("/");
     }

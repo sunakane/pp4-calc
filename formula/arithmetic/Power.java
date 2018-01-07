@@ -1,23 +1,24 @@
+package formula.arithmetic;
+
 import formula.*;
-import number.*;
 
 public class Power extends BinaryOperator {
-    public Power(Expression l, Expression r) {
-        this.left = l;
-        this.right = r;
-    }
+	public Power(Expression l, Expression r) {
+		super(l, r);
+	}
 
-    @Override
-    public int getValue() {
-        return Math.Pow(this.left.getValue(), this.right.getValue());
-    }
+	@Override
+	public int getValue() {
+		return (int)Math.pow(this.left.getValue(), this.right.getValue());
+	}
 
-    @Override
-    public int getPriority() {
-        return 0;
-    }
+	@Override
+	public int getPriority() {
+		return 3;
+	}
 
-    public int toString() {
-        return super.toString("^");
-    }
+	@Override
+	public String toString() {
+		return super.toString("^");
+	}
 }

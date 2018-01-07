@@ -1,7 +1,8 @@
-import formula.*;
-import number.*;
+package formula.arithmetic;
 
-class Mult extends BinaryOperator {
+import formula.*;
+
+public class Mult extends BinaryOperator {
     public Mult(Expression l, Expression r) {
         super(l, r);
     }
@@ -13,9 +14,10 @@ class Mult extends BinaryOperator {
 
     @Override
     public int getPriority() {
-        return 1;
+        return 2;
     }
 
+    @Override
     public String toString() {
         return super.toString("*");
     }
